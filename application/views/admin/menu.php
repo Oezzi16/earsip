@@ -1,14 +1,14 @@
 <!-- Sidebar -->
 <ul class="navbar-nav sidebar sidebar-light accordion" id="accordionSidebar">
     <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
-        <div class="sidebar-brand-icon">
+        <div class="sidebar-brand-icon d-none">
             <img src="<?= base_url('assets/ruangadmin/'); ?>img/logo/logo2.png">
         </div>
-        <div class="sidebar-brand-text mx-3">RuangAdmin</div>
+        <div class="sidebar-brand-text mx-3">E-Arsip</div>
     </a>
     <hr class="sidebar-divider my-0">
     <li class="nav-item active">
-        <a class="nav-link" href="index.html">
+        <a class="nav-link" href="<?php echo site_url('dashboard'); ?>">
             <i class="fas fa-fw fa-tachometer-alt"></i>
             <span>Dashboard</span></a>
     </li>
@@ -261,7 +261,7 @@
                     <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown"
                         aria-haspopup="true" aria-expanded="false">
                         <img class="img-profile rounded-circle" src="<?= base_url('assets/ruangadmin/'); ?>img/boy.png" style="max-width: 60px">
-                        <span class="ml-2 d-none d-lg-inline text-white small">Maman Ketoprak</span>
+                        <span class="ml-2 d-none d-lg-inline text-white small"><?php echo $this->session->userdata('username'); ?></span>
                     </a>
                     <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="userDropdown">
                         <a class="dropdown-item" href="#">

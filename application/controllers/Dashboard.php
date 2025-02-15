@@ -7,6 +7,11 @@ class Dashboard extends CI_Controller
 
     public function index()
     {
+        // Cek apakah user belum sudah login
+        if (!$this->session->userdata('user_id')) {
+            // Jika sudah login, redirect ke auth
+            redirect('auth');
+        }
         // parameter data yg dikirim lalu diextract jadi variabel.
         // extract($this->input->get());
         // if (empty($nama)) {
